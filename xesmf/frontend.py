@@ -8,6 +8,7 @@ import cf_xarray as cfxr
 import numpy as np
 import xarray as xr
 from xarray import DataArray, Dataset
+import sparse as sps
 
 from .backend import Grid, LocStream, Mesh, add_corner, esmf_regrid_build, esmf_regrid_finalize
 from .smm import (
@@ -639,7 +640,8 @@ class BaseRegridder(object):
         """Save weights to disk as a netCDF file."""
         if filename is None:
             filename = self.filename
-        w = self.weights.data
+        #w = self.weights.data
+        w=sps.COO.from_numpy( self.weights.data )
         dim = 'n_s'
         ds = xr.Dataset(
             {'S': (dim, w.data), 'col': (dim, w.coords[1, :] + 1), 'row': (dim, w.coords[0, :] + 1)}

@@ -54,6 +54,13 @@ Contents
 
 .. toctree::
    :maxdepth: 1
+   :caption: Issues and proposed fix
+
+   notebooks/Small_size_problems_Structured_grids_with_mask_Issues_1_and_2_with_xarray_DataArray_backed_by_sparse_COO
+   notebooks/Large_size_problems_Structured_grids_with_mask_FIX10_Issue9_with_xarray_DataArray_backed_by_sparse_COO
+
+.. toctree::
+   :maxdepth: 1
    :caption: Technical notes
 
    changes
@@ -93,3 +100,5 @@ More advanced ways:
 
 - Cite xESMF in your scientific publications. Currently the best way is to cite the DOI: https://doi.org/10.5281/zenodo.4294774.
 - If you'd like to contribute code, see this `preliminary contributor guide <https://github.com/JiaweiZhuang/xESMF/issues/28>`_. Also see `Contributing to xarray <http://xarray.pydata.org/en/stable/contributing.html>`_ for more backgrounds.
+
+
